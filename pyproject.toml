@@ -9,6 +9,9 @@ readme = "README.md"
 python = "^3.12"
 fastapi = {extras = ["standard"], version = "^0.115.0"}
 pydantic = {extras = ["email"], version = "^2.9.2"}
+sqlalchemy = "^2.0.35"
+pydantic-settings = "^2.5.2"
+alembic = "^1.13.3"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -36,6 +39,8 @@ run = 'fastapi dev fast_api_curso/app.py'
 pre_test = 'task lint'
 test = 'pytest -s -x --cov=fast_api_curso -vv'
 post_test = 'coverage html'
+migration_up = 'alembic upgrade head'
+migration_down = 'alembic downgrade -1'
 
 
 [build-system]
