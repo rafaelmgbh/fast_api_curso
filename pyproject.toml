@@ -41,6 +41,7 @@ test = 'pytest -s -x --cov=fast_api_curso -vv'
 post_test = 'coverage html'
 migration_up = 'alembic upgrade head'
 migration_down = 'alembic downgrade -1'
+auto_migration = 'alembic revision --autogenerate -m'
 
 
 [build-system]
