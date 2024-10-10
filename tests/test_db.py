@@ -4,7 +4,11 @@ from fast_api_curso.models import User
 
 
 def test_create_user(session):
-    new_user = User(username="rafael", password="secret", email="teste@test")
+    new_user = User(
+        username="rafael",
+        password="secret",
+        email="teste@test",
+    )
     session.add(new_user)
     session.commit()
 
